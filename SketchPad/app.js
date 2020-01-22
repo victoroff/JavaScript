@@ -21,3 +21,9 @@ function greet(name){
 }
 
 greet();
+
+
+class Person extends Human{
+
+}
+let person = new person();
