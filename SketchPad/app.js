@@ -14,10 +14,11 @@ console.log('finished');
 
 
 
-//default 
+//default value
 function greet(name){
-    name = name || '<Your name here>';
+    name = name || '<Your name here>'; // checks if name is undefined . If it is it sets the value to the right.
     console.log('Hello, ' + name);
 }
 
-greet();
+greet(); // => Hello, <Your name here>
+greet('Jonka');// => Hello, Jonka
