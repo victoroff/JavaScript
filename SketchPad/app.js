@@ -20,5 +20,15 @@ function greet(name){
     console.log('Hello, ' + name);
 }
 
-greet(); // => Hello, <Your name here>
-greet('Jonka');// => Hello, Jonka
+// <<<<<<< HEAD
+// greet(); // => Hello, <Your name here>
+// greet('Jonka');// => Hello, Jonka
+// =======
+// greet();
+
+
+// class Person extends Human{
+
+// }
+// let person = new person();
+// >>>>>>> 5d3af4b7ffbc50395e023bfef6b1ff70833feb36
