@@ -1,0 +1,18 @@
+section{
+    background-color:lightblue;
+}
+section #input-task,#add-task-btn{
+    width: 80%;
+}
+section #add-task-btn{
+    display: inline-block;
+    padding: 1px 0px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    background-color: lightcoral;
+    width: 19%;
+}
+section #add-task-btn :hover{
+    background-color: coral;
+}
