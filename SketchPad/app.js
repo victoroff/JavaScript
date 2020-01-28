@@ -7,7 +7,7 @@ function clickHandler(){
     console.log('click event!');
 }
 
-document.addEventListener('click',clickHandler);
+//document.addEventListener('click',clickHandler);
 
 // waitThreeSeconds();
 // console.log('finished');
@@ -45,6 +45,7 @@ document.addEventListener('click',clickHandler);
 
 
 //learning queryselector
+
 //let navElements = document.querySelector('nav');
 //console.log(navElements);
 //console.log(document.querySelector('#home-btn'));
@@ -52,33 +53,49 @@ document.querySelector('#home-btn').onclick = () => {
     window.open('index.html','_self'); // _self to open in the same tab
 }
 
-class Animal{
-    constructor(name,age,gender,family){
-        this.name = name
-        this.age = age
-        this.gender = gender
-        this.family = family
-    }
-}
+//test classes
 
-class Lion extends Animal {
+// class Animal{
+//     constructor(name,age,gender,family){
+//         this.name = name
+//         this.age = age
+//         this.gender = gender
+//         this.family = family
+//     }
+// }
+
+// class Lion extends Animal {
     
-    constructor(ruff){
-        super()
-        this.ruff = ruff
-    }
-    static Attack(){
-        cosnole.log('big kitty attacks with paws!!!')
-    }
+//     constructor(ruff){
+//         super()
+//         this.ruff = ruff
+//     }
+//     static Attack(){
+//         cosnole.log('big kitty attacks with paws!!!')
+//     }
+// }
+
+
+// let leo = new Lion()
+
+
+// leo.name = 'leo'
+// leo.age = 12
+// leo.gender = 'male'
+// leo.ruff = 'golden'
+
+// console.log(leo)
+
+//test math
+function random(number) {
+    return Math.floor(Math.random() * (number+1));// math.random returns float number
+  }
+//console.log(Math.sqrt(64))
+document.addEventListener('click',colorBtnHandler);
+function colorBtnHandler(){
+    const header = document.querySelector('header');
+    let rndColor = `rgb(${random(255)},${random(255)},${random(255)})`;
+    header.style.backgroundColor = rndColor;
 }
 
 
-let leo = new Lion()
-
-
-leo.name = 'leo'
-leo.age = 12
-leo.gender = 'male'
-leo.ruff = 'golden'
-
-console.log(leo)

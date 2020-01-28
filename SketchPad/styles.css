@@ -16,6 +16,6 @@ nav{
     border: khaki;
     display: block;
 }
-#home-btn{
+#home-btn,#changeclr-btn{
     padding: 5px;
 }
