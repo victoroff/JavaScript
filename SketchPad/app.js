@@ -1,24 +1,34 @@
-function waitThreeSeconds(){
-    var ms = 3000 + new Date().getTime();
-    while(new Date() < ms){}
-    console.log('finished function');
-}
+// function waitThreeSeconds(){
+//     var ms = 3000 + new Date().getTime();
+//     while(new Date() < ms){}
+//     console.log('finished function');
+// }
 function clickHandler(){
     console.log('click event!');
 }
 
 document.addEventListener('click',clickHandler);
 
-waitThreeSeconds();
-console.log('finished');
+// waitThreeSeconds();
+// console.log('finished');
 
 
 
-//default value
-function greet(name){
-    name = name || '<Your name here>'; // checks if name is undefined . If it is it sets the value to the right.
-    console.log('Hello, ' + name);
-}
+  
+// learn how classes work in js
+// let matey = new Person();
+
+// matey.name = 'Matey';
+// matey.age = 26;
+// console.log(matey);
+
+
+
+// //default value
+// function greet(name){
+//     name = name || '<Your name here>'; // checks if name is undefined . If it is it sets the value to the right.
+//     console.log('Hello, ' + name);
+// }
 
 // <<<<<<< HEAD
 // greet(); // => Hello, <Your name here>
@@ -32,3 +42,43 @@ function greet(name){
 // }
 // let person = new person();
 // >>>>>>> 5d3af4b7ffbc50395e023bfef6b1ff70833feb36
+
+
+//learning queryselector
+//let navElements = document.querySelector('nav');
+//console.log(navElements);
+//console.log(document.querySelector('#home-btn'));
+document.querySelector('#home-btn').onclick = () => {
+    window.open('index.html','_self'); // _self to open in the same tab
+}
+
+class Animal{
+    constructor(name,age,gender,family){
+        this.name = name
+        this.age = age
+        this.gender = gender
+        this.family = family
+    }
+}
+
+class Lion extends Animal {
+    
+    constructor(ruff){
+        super()
+        this.ruff = ruff
+    }
+    static Attack(){
+        cosnole.log('big kitty attacks with paws!!!')
+    }
+}
+
+
+let leo = new Lion()
+
+
+leo.name = 'leo'
+leo.age = 12
+leo.gender = 'male'
+leo.ruff = 'golden'
+
+console.log(leo)

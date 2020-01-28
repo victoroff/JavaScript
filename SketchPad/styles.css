@@ -1,0 +1,21 @@
+header{
+    display: block;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: cadetblue;
+    height: 50px;
+    padding: 12px 0 0 15px;
+    font-size: 32px;
+}
+nav{
+    position: relative;
+    left: 200px;
+    top:15px;
+    border: khaki;
+    display: block;
+}
+#home-btn{
+    padding: 5px;
+}
