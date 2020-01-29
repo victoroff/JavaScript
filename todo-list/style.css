@@ -2,16 +2,11 @@ section{
     text-align: center;
     background-color:lightblue;
 }
-section #input-task,#add-task-btn{
-    width: 80%;
-}
-section #add-task-btn{
-    display: inline-block;
+
+section form #add-task-btn{
     padding: 1px 0px;
     border-width: 2px;
-    border-style: inset;
-    border-color: initial;
-    background-color: lightcoral;
+    background-color:lightblue;
     width: 19%;
 }
 section #add-task-btn :hover{
@@ -19,7 +14,6 @@ section #add-task-btn :hover{
 }
 
 section ul{
-    
     padding:0;
     list-style-type: none;
 }
