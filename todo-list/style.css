@@ -1,16 +1,26 @@
-section{
+section,form{
     text-align: center;
     background-color:lightblue;
 }
-
-section form #add-task-btn{
-    padding: 1px 0px;
-    border-width: 2px;
+form{
+    background-color:lightblue;
+}
+#input-task{
+    display: inline-block;
+    margin: 0;
+    padding: 4px 0px;
+    width: 80%;
+}
+#add-task-btn{
+    display: inline-block;
+    padding: 7px 0px;
+    border-width: 1px;
+    border-color: grey;
     background-color:lightblue;
     width: 19%;
 }
-section #add-task-btn :hover{
-    background-color: coral;
+#add-task-btn:hover{
+    background-color: aquamarine;
 }
 
 section ul{

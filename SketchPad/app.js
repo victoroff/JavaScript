@@ -87,6 +87,13 @@ document.querySelector('#home-btn').onclick = () => {
 // console.log(leo)
 
 //test math
+import {Person} from './person'; // this is how u call another class
+let mancho = new Person();
+mancho = {
+    name:'mancho',
+    age:23
+}
+console.log(macho);
 function random(number) {
     return Math.floor(Math.random() * (number+1));// math.random returns float number
   }
