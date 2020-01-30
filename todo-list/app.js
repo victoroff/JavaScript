@@ -18,7 +18,8 @@ function addTask(){
         //remove task
         setTimeout(() => {
             task.parentElement.removeChild(task); 
-             taskList.removeChild(task);   
+            //remove from arr
+            taskList.splice( taskList.indexOf(task), 1 );
         }, 2000);
     };
     task.appendChild(taskContent);

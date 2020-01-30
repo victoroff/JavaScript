@@ -87,7 +87,7 @@ document.querySelector('#home-btn').onclick = () => {
 // console.log(leo)
 
 //test math
-import {Person} from './person'; // this is how u call another class
+import {Person} from 'person'; // this is how u call another class
 let mancho = new Person();
 mancho = {
     name:'mancho',
