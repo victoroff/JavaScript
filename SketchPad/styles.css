@@ -18,4 +18,6 @@ nav{
 }
 #home-btn,#changeclr-btn{
     padding: 5px;
+    border:grey 2px;
+    background-color: hotpink;
 }

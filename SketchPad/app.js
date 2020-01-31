@@ -87,13 +87,15 @@ document.querySelector('#home-btn').onclick = () => {
 // console.log(leo)
 
 //test math
-import {Person} from 'person'; // this is how u call another class
-let mancho = new Person();
-mancho = {
-    name:'mancho',
-    age:23
-}
-console.log(macho);
+// import {Person} from './modules/person'; // Uncaught SyntaxError: Cannot use import statement outside a module ??????
+
+// let mancho = new Person();
+
+// mancho = {
+//     name:'mancho',
+//     age:23
+// }
+// console.log(macho);
 function random(number) {
     return Math.floor(Math.random() * (number+1));// math.random returns float number
   }
