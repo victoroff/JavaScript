@@ -5,7 +5,7 @@ section,form{
     text-align: center;
     background-color:lightblue;
 }
-#task-form{
+#tasks-form{
     background-color:lightblue;
 }
 #input-task{
@@ -35,9 +35,17 @@ section ul li form{
     padding: 2px 0 2px 10px;
     margin:0 0 5px 0;
     background-color: antiquewhite;
-    font-size: 20px;
     list-style-type: none;
     text-align: left;
+}
+
+.task{
+    border:none;
+    display: inline-block;
+    width: 95%;
+    left:0;
+    padding: 0;
+    font-size: 20px;
 }
 section ul li:hover{
     background-color: cornsilk;

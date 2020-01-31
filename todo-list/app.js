@@ -9,16 +9,41 @@ function initList(){
 function addTask(){
     event.preventDefault();
     let task = document.createElement('li');
-    let form = document.createElement('form');
-    task.appendChild(form);
 
+    //create task list form
+    let form = document.createElement('form');
+    form.id = 'list-form';
+    form.action = 'submit';
+    form.addEventListener("submit", completeTask(task)); // executing right away
+    form.target = '_parent';
+    //onSubmit = function() {completeTask(task)};// not showing
+
+    //create field for the task value
+    let outputTask = document.createElement('input');
+    outputTask.type = 'text';
+    outputTask.classList.add('task');
+    outputTask.disabled = true;
+    //get value from the input
     let taskValue = document.getElementById('input-task').value;
     taskList.push(taskValue);
-    let taskContent = document.createTextNode(taskValue);
-    //task.onclick = completeTask(task);
-    form.action = 'submit';
-    form.onsubmit = function() {completeTask(task)};
-    form.appendChild(taskContent);
+    
+    //set value to task list form
+    outputTask.value = taskValue;
+    form.appendChild(outputTask);
+
+    //create submit button
+    let completeTaskBtn = document.createElement('button');
+    completeTaskBtn.type = 'submit';
+    //add link to form
+    completeTaskBtn.form = form;
+    // visual text of the button
+    completeTaskBtn.textContent = 'complete';
+    
+    //add complete button to form
+    form.appendChild(completeTaskBtn);
+    
+    //add form to li
+    task.appendChild(form);
     if(taskValue !== ''){
         document.getElementById('task-list').appendChild(task);           
     }
@@ -26,7 +51,7 @@ function addTask(){
 }
 
 function completeTask(task){
-    //mark as completed
+   // mark as completed
     task.classList.add('completed');
     //remove task
     setTimeout(() => {
