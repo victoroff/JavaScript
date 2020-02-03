@@ -7,16 +7,14 @@ function initList(){
 }
 
 function addTask(){
-    event.preventDefault();
+   // event.preventDefault();
     let task = document.createElement('li');
 
     //create task list form
     let form = document.createElement('form');
     form.id = 'list-form';
-    form.action = 'submit';
-    form.addEventListener("submit", completeTask(task)); // executing right away
-    form.target = '_parent';
-    //onSubmit = function() {completeTask(task)};// not showing
+    //form.target = '_self';
+    form.onsubmit = completeTask(event);
 
     //create field for the task value
     let outputTask = document.createElement('input');
@@ -33,12 +31,14 @@ function addTask(){
 
     //create submit button
     let completeTaskBtn = document.createElement('button');
+    completeTaskBtn.id = 'complete-task' ;
     completeTaskBtn.type = 'submit';
-    //add link to form
-    completeTaskBtn.form = form;
     // visual text of the button
     completeTaskBtn.textContent = 'complete';
     
+    //parent form
+    completeTask.form = form.id;
+
     //add complete button to form
     form.appendChild(completeTaskBtn);
     
@@ -50,15 +50,17 @@ function addTask(){
     document.getElementById('input-task').value = '';
 }
 
-function completeTask(task){
-   // mark as completed
-    task.classList.add('completed');
-    //remove task
-    setTimeout(() => {
-        task.parentElement.removeChild(task); 
-        //remove from arr
-        taskList.splice( taskList.indexOf(task), 1);
-    }, 2000);
+function completeTask(event){
+   console.log(event.target);
+   event.preventDefault();
+    // // mark as completed
+    // task.classList.add('completed');
+    // //remove task
+    // setTimeout(() => {
+    //     task.parentElement.removeChild(task); 
+    //     //remove from arr
+    //     taskList.splice( taskList.indexOf(task), 1);
+    // }, 2000);
 }
 
 class Task{
