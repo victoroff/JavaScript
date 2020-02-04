@@ -41,6 +41,7 @@ section ul li form{
 
 .task{
     border:none;
+    background-color: none;
     display: inline-block;
     width: 95%;
     left:0;

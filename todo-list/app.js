@@ -7,15 +7,18 @@ function initList(){
 }
 
 function addTask(){
-   // event.preventDefault();
+    event.preventDefault();
     let task = document.createElement('li');
 
     //create task list form
     let form = document.createElement('form');
     form.id = 'list-form';
     //form.target = '_self';
-    form.onsubmit = completeTask(event);
-
+    // form.onsubmit = completeTask(event);
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        completeTask(e);
+    });
     //create field for the task value
     let outputTask = document.createElement('input');
     outputTask.type = 'text';
@@ -44,24 +47,25 @@ function addTask(){
     
     //add form to li
     task.appendChild(form);
+    
     if(taskValue !== ''){
         document.getElementById('task-list').appendChild(task);           
     }
     document.getElementById('input-task').value = '';
 }
 
-function completeTask(event){
-   console.log(event.target);
-   event.preventDefault();
-    // // mark as completed
-    // task.classList.add('completed');
-    // //remove task
-    // setTimeout(() => {
-    //     task.parentElement.removeChild(task); 
-    //     //remove from arr
-    //     taskList.splice( taskList.indexOf(task), 1);
-    // }, 2000);
-}
+function completeTask(ev){
+    //console.log(ev);
+    let task = ev.target;
+    // mark as completed
+    task.classList.add('completed');
+    //remove task
+    setTimeout(() => {
+        task.parentElement.removeChild(task); 
+        //remove from arr
+        taskList.splice( taskList.indexOf(task), 1);
+    }, 2000);
+ }
 
 class Task{
     constructor(name){
