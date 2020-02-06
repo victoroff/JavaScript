@@ -108,3 +108,13 @@ function colorBtnHandler(){
 }
 
 
+function updatePlayerName(){
+    const player = document.getElementById('player');
+    let name = prompt('Enter player name!');
+    player.textContent = 'Player : ' + name;
+}
+
+
+
+
+
