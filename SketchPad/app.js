@@ -115,6 +115,5 @@ function updatePlayerName(){
 }
 
 
-
-
+var a = console.log((false && !true) || 68) || false || 4;
 
