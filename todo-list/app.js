@@ -38,7 +38,7 @@ function addTask(){
     completeTaskBtn.type = 'submit';
     // visual text of the button
     completeTaskBtn.textContent = 'complete';
-    
+    completeTaskBtn.classList.add('complete-task-btn');
     //parent form
     completeTask.form = form.id;
 
@@ -56,9 +56,9 @@ function addTask(){
 
 function completeTask(ev){
     //console.log(ev);
-    let task = ev.target;
+    let task = ev.currentTarget.parentNode;
     // mark as completed
-    task.classList.add('completed');
+    task.firstElementChild.classList.add('completed');
     //remove task
     setTimeout(() => {
         task.parentElement.removeChild(task); 

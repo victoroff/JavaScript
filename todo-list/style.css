@@ -6,24 +6,8 @@ section,form{
     background-color:lightblue;
 }
 #tasks-form{
+    display: block;
     background-color:lightblue;
-}
-#input-task{
-    display: inline-block;
-    margin: 0;
-    padding: 4px 0px;
-    width: 80%;
-}
-#add-task-btn{
-    display: inline-block;
-    padding: 7px 0px;
-    border-width: 1px;
-    border-color: grey;
-    background-color:lightblue;
-    width: 19%;
-}
-#add-task-btn:hover{
-    background-color: aquamarine;
 }
 
 section ul{
@@ -32,6 +16,7 @@ section ul{
     list-style-type: none;
 }
 section ul li form{
+    
     padding: 2px 0 2px 10px;
     margin:0 0 5px 0;
     background-color: antiquewhite;
@@ -39,19 +24,49 @@ section ul li form{
     text-align: left;
 }
 
+section ul li:hover{
+    background-color: cornsilk;
+}
+
+.input-task-field{
+    display: inline-block;
+    margin: 0;
+    padding: 4px 0px;
+    width: 80%;
+}
+
+.task-btn{
+    display: inline-block;
+    
+    border-width: 1px;
+    border-color: grey;
+    background-color:lightblue;
+    width: 19%;
+}
+
+.task-btn:hover{
+    background-color: aquamarine;
+}
+
 .task{
     border:none;
-    background-color: none;
+    background: none;
     display: inline-block;
     width: 95%;
     left:0;
     padding: 0;
     font-size: 20px;
 }
-section ul li:hover{
-    background-color: cornsilk;
-}
+
 .completed ,.completed:hover{
     background-color: grey;
     text-decoration: line-through;
+}
+
+.complete-task-btn{
+    display: inline-block;
+    padding: 7px 2px;
+    border-width: 1px;
+    border-color: grey;
+    background-color:aquamarine;
 }
