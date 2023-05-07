@@ -21,6 +21,6 @@
   "author": "Bebbo Viktoroff",
   "license": "ISC",
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.1102.1"
+    "@angular-devkit/build-angular": "^16.0.0"
   }
 }
